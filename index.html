@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0f">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Yotra Music</title>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span>♪</span> Yotra Music</div>
+    <button class="nav active" data-view="home">⌂ <span>หน้าหลัก</span></button>
+    <button class="nav" data-view="library">♫ <span>คลังเพลง</span></button>
+    <button class="nav" data-view="favorites">♥ <span>รายการโปรด</span></button>
+    <button class="nav" data-view="playlists">▣ <span>เพลย์ลิสต์</span></button>
+    <div class="sidebar-bottom">
+      <button id="pickFolder" class="outline">＋ เพิ่มโฟลเดอร์เพลง</button>
+      <small id="storageStatus">ยังไม่ได้เลือกคลังเพลง</small>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <button id="mobileMenu" class="icon-btn">☰</button>
+      <div class="search-wrap">
+        <span>⌕</span><input id="search" placeholder="ค้นหาเพลง ศิลปิน หรืออัลบั้ม">
+      </div>
+    </header>
+
+    <section id="content"></section>
+  </main>
+
+  <footer class="player">
+    <div class="now-playing">
+      <div class="cover" id="cover">♪</div>
+      <div class="track-meta">
+        <strong id="nowTitle">ยังไม่ได้เล่นเพลง</strong>
+        <span id="nowArtist">เลือกเพลงจากคลังของคุณ</span>
+      </div>
+      <button id="favoriteBtn" class="icon-btn" title="รายการโปรด">♡</button>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <button id="shuffleBtn" class="icon-btn">🔀</button>
+        <button id="prevBtn" class="icon-btn">⏮</button>
+        <button id="playBtn" class="play-btn">▶</button>
+        <button id="nextBtn" class="icon-btn">⏭</button>
+        <button id="repeatBtn" class="icon-btn">↻</button>
+      </div>
+      <div class="progress-row">
+        <span id="currentTime">0:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0">
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <div class="volume">
+      <span>🔊</span>
+      <input id="volume" type="range" min="0" max="1" step=".01" value=".9">
+    </div>
+  </footer>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="app.js"></script>
+</body>
+</html>

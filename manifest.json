@@ -1,0 +1,10 @@
+{
+  "name":"Yotra Music",
+  "short_name":"Yotra Music",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#0b0b0f",
+  "theme_color":"#0b0b0f",
+  "description":"Personal music player",
+  "icons":[]
+}
